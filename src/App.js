@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {ContenedorApp, ImagenApp, HeadingApp} from './styled/StdApp';
+import Formulario from './components/Formulario';
+import imagen from './assets/images/cryptomonedas.png';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ContenedorApp>
+            <div>
+                <ImagenApp
+                    src={imagen}
+                    alt="Imagen crypto"
+                />
+            </div>
+            <div>
+                <HeadingApp>
+                    Cotiza cryptomonedas al instante
+                </HeadingApp>
+                <Formulario/>
+            </div>
+        </ContenedorApp>
+    );
 }
 
 export default App;
