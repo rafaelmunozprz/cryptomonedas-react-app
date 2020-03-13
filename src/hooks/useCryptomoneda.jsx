@@ -1,10 +1,10 @@
 import React,  {Fragment, useState} from 'react';
 import {LblFormulario, SltFormulario} from '../styled/StdFormulario';
 
-const useModeda = (label, MODEDAS) => {
+const useCryptomoneda = (label, CRYPTOMONEDAS) => {
     //State del custom hook
     const [state, actualizarState] = useState('');
-    const Seleccionar = () => (
+    const SeleccionarCypto = () => (
         <Fragment>
             <LblFormulario htmlFor="monedas">
                 {label}
@@ -12,19 +12,18 @@ const useModeda = (label, MODEDAS) => {
             <SltFormulario
                 id="monedas"
                 onChange={e => actualizarState(e.target.value)}
-                // onChange={e => console.log(e.target.value)}
                 value={state}
             >
                 <option value="">-- Seleccione la moneda --</option>
-                {MODEDAS.map(opcion => (
-                    <option key={opcion.codigo} value={opcion.codigo}>{opcion.nombre}</option>
+                {CRYPTOMONEDAS.map(opcion => (
+                    <option key={opcion.CoinInfo.Id} value={opcion.CoinInfo.Name}>{opcion.CoinInfo.FullName}</option>
                 ))}
             </SltFormulario>
         </Fragment>
     );
 
     //Retornar state, interfaz y fn que modifica el state
-    return [state, Seleccionar, actualizarState];
+    return [state, SeleccionarCypto, actualizarState];
 };
 
-export default useModeda;
+export default useCryptomoneda;
