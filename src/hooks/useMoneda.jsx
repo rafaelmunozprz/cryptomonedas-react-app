@@ -12,7 +12,6 @@ const useModeda = (label, MODEDAS) => {
             <SltFormulario
                 id="monedas"
                 onChange={e => actualizarState(e.target.value)}
-                // onChange={e => console.log(e.target.value)}
                 value={state}
             >
                 <option value="">-- Seleccione la moneda --</option>

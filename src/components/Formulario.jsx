@@ -59,7 +59,6 @@ const Formulario = ({guardarMoneda, guardarCryptomoneda}) => {
                 }
                 <SelectMonedas />
                 <SelectCrypto />
-                <div>{moneda}</div>
                 <BtnFormulario
                     type="submit"
                     value="Calcular"
