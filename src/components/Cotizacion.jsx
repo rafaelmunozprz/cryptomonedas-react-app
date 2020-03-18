@@ -12,11 +12,11 @@ const Cotizacion = ({resultado}) => {
         <Fragment>
             <div>
                 <CotizacionApp>
-                    <p>El precio es:  <span>{resultado.PRICE}</span></p>
-                    <p>Precio más alto del dia:  <span>{resultado.HIGHDAY}</span></p>
-                    <p>Precio más bajo del día:  <span>{resultado.LOWDAY}</span></p>
-                    <p>Variación últimas 24 horas:  <span>{resultado.CHAGEPCT24HOUR}</span></p>
-                    <p>Última actualización:  <span>{resultado.LASTUPDATE}</span></p>
+                    El precio es:  <span>{resultado.PRICE}</span><br></br>
+                    Precio más alto del dia:  <span>{resultado.HIGHDAY}</span><br></br>
+                    Precio más bajo del día:  <span>{resultado.LOWDAY}</span><br></br>
+                    Variación últimas 24 horas:  <span>{resultado.CHAGEPCT24HOUR}</span><br></br>
+                    Última actualización:  <span>{resultado.LASTUPDATE}</span><br></br>
                 </CotizacionApp>
             </div>
         </Fragment>
